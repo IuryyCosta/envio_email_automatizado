@@ -80,15 +80,20 @@ pip install -r requirements.txt
 Crie um arquivo `.env` na raiz com as seguintes variáveis:
 
 ```env
-EXECUTION_HOUR=16
-EXECUTION_MINUTE=30
+ # Database Configuration
+ORACLE_HOST= 
+ORACLE_PORT=
+ORACLE_USER=
+ORACLE_PASSWORD=
+ORACLE_DATABASE=
+ORACLE_SERVICE_NAME = 
+ORACLE_LIB_DIR=
+ORACLE_CONNECT_STRING= '(DESCRIPTION=(ADDRESS_LIST=(ADDRESS = (PROTOCOL = TCP)(HOST = )(PORT = )))(CONNECT_DATA=(SERVICE_NAME = )))'
 
-EMAIL_HOST=smtp.seuprovedor.com
-EMAIL_PORT=587
-EMAIL_USERNAME=seu@email.com
-EMAIL_PASSWORD=sua_senha
-EMAIL_FROM=seu@email.com
-EMAIL_TO=destinatario@email.com
+# Email Configuration
+EMAIL_FROM= 
+EMAIL_TO= 
+RESEND_API_KEY= 
 ```
 
 ---
