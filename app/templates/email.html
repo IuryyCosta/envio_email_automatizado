@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; color: #333; padding: 20px; }
+        h2 { color: #0066cc; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .section { margin-bottom: 40px; }
+    </style>
+</head>
+<body>
+    <h1>📬 Relatório de Integração</h1>
+    <p><strong>Data de envio:</strong> {{ data_envio }}</p>
+
+    <div class="section">
+        <h2>📊 Total Integrações Realizadas</h2>
+        <table>
+            <thead>
+                <tr>
+                    {% for col in diferenca[0].keys() %}
+                        <th>{{ col }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in diferenca %}
+                    <tr>
+                        {% for value in row.values() %}
+                            <td>{{ value }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>✅ Integrações com Sucesso vs Erros</h2>
+        <table>
+            <thead>
+                <tr>
+                    {% for col in quantidade[0].keys() %}
+                        <th>{{ col }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in quantidade %}
+                    <tr>
+                        {% for value in row.values() %}
+                            <td>{{ value }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>⚠️ Detalhes dos Erros</h2>
+        <table>
+            <thead>
+                <tr>
+                    {% for col in erros[0].keys() %}
+                        <th>{{ col }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in erros %}
+                    <tr>
+                        {% for value in row.values() %}
+                            <td>{{ value }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <p>📧 Este e-mail foi gerado automaticamente pelo sistema.</p>
+</body>
+</html>

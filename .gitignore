@@ -1,0 +1,46 @@
+# Virtual environment
+.env
+.venv/
+venv/
+ENV/
+env.bak/
+env/
+
+# Environment variables
+*.env
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints
+
+# Arquivos de log
+*.log
+
+# Dados temporários
+*.sqlite3
+*.db
+*.bak
+*.tmp
+
+# Relatórios e arquivos gerados
+*.xlsx
+*.pdf
+*.csv
+*.zip
+
+# Pytest
+.cache/
+.pytest_cache/
+
+# mypy, pylint, coverage, etc.
+.mypy_cache/
+coverage/
+*.cover
+*.py,cover
+
+# Arquivos específicos do Resend ou builds
+dist/
+build/
+*.egg-info/
+
+# PM2 logs se estiver rodando como serviço
+pm2-log/
