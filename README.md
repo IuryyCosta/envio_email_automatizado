@@ -16,7 +16,7 @@ Este projeto é uma aplicação em Python que agenda e envia e-mails automaticam
 
 ## ✨ Tecnologias utilizadas
 
-- Python 3.10+
+- Python 3.11+
 - FastAPI (opcional)
 - APScheduler
 - Uvicorn (opcional)
