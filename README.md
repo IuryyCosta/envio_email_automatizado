@@ -66,6 +66,7 @@ cd envio_email_automatizado
 ```bash
 python -m venv venv
 venv\Scripts\activate   # No Windows
+source venv/bin/activate  # No Linux/Mac
 ```
 
 3. **Instale as dependências**
