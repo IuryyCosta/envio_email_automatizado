@@ -4,11 +4,15 @@ import time
 import os
 from dotenv import load_dotenv
 from app.services.email_report import enviar_email_com_relatorio
+from app.utils.settings import EXECUTION_HOUR, EXECUTION_MINUTE
 
 load_dotenv()
 
-EXECUTION_HOUR = int(os.getenv("EXECUTION_HOUR", 8))     # Ex: 08:00
-EXECUTION_MINUTE = int(os.getenv("EXECUTION_MINUTE", 0))
+""" EXECUTION_HOUR = int(os.getenv("EXECUTION_HOUR", 8))
+EXECUTION_MINUTE = int(os.getenv("EXECUTION_MINUTE", 0)) """
+
+print(EXECUTION_HOUR, EXECUTION_MINUTE)
+print(f"[🕒] Hora de execução programada para: {EXECUTION_HOUR:02d}:{EXECUTION_MINUTE:02d}")
 
 def schedule_execution():
     def schedule_next():
@@ -37,10 +41,3 @@ def schedule_execution():
 
     schedule_next()
 
-if __name__ == "__main__":
-    print("[🔁] Agendador iniciado...")
-    schedule_execution()
-
-    # Manter o script vivo
-    while True:
-        time.sleep(60)
